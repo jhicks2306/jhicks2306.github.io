@@ -60,14 +60,6 @@ h2 ~ p {
 }
 .header-nav a {
   color: #fff;
-  font-size: 0.8rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.header-nav a:hover,
-.header-nav a:active {
-  color: #ed6e2f;
 }
 .header-nav > li:first-child a {
   color: #ed6e2f;
@@ -97,6 +89,24 @@ h2 ~ p {
 .footer h3 span {
   color: #aaa;
 }
+.footer-nav li {
+  display: inline-block;
+  margin: 2em 1em 0;
+}
+.footer-nav a {
+  color: #ccc;
+}
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase
+}
+.nav-links a:hover,
+.nav-links a:active {
+  color: #ed6e2f;
+}
+
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
