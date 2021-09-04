@@ -151,6 +151,9 @@ h2 ~ p {
 .footer-nav a {
   color: #ccc;
 }
+.footer-social {
+  margin-top: 2em;
+}
 
 /* HERO STYLES */
 .full-hero {
