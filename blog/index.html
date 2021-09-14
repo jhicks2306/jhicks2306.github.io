@@ -6,19 +6,7 @@ layout: default
   <h1>Bloggie Blog</h1>
   <div class="col-two blog-cols">
     <div class="col col-aside blog-recent">
-      <!-- Refactor this code by creating inlcude -->
-      <h4>Recent Posts</h4>
-      <ul class="blog-title-list">
-        {% for post in site.posts limit:5 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span>Posted: {{ post.date | date: '%B %d, %Y' }}</span>
-            <span>Author: {{ post.author }}</span>
-            <img src="{{ post.gravatar}}" alt="Avatar" class="blog-title-img">
-          </li>
-        {% endfor %}
-      </ul>
-      <!-- Refactor this code by creating inlcude -->
+      {% include recent-posts.html %}
     </div>
     <div class="col col-content blog-previews">
       {% for post in site.posts %}
