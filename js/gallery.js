@@ -1,6 +1,10 @@
 function activateGallery() {
-  let thumbnails = document.querySelectorAll("#gallery-thumbs > div > img");
-  let mainImage = document.querySelector("#gallery-photo > img");
+  let thumbnails  = document.querySelectorAll("#gallery-thumbs > div > img");
+  let mainImage   = document.querySelector("#gallery-photo > img");
+  // Image info to be updated
+  let galleryInfo = document.querySelector("#gallery-info");
+  let title       = galleryInfo.querySelector(".title");
+  let description = galleryInfo.querySelector(".description");
 
   thumbnails.forEach(function(thumbnail) {
     thumbnail.addEventListener("click", function() {
@@ -13,6 +17,10 @@ function activateGallery() {
       let currentClass = "current";
       document.querySelector("." + currentClass).classList.remove(currentClass);
       thumbnail.parentNode.classList.add(currentClass);
+
+      // Update image info
+      title.innerHTML       = thumbnail.dataset.title;
+      description.innerHTML = thumbnail.dataset.description;
     });
   });
 }
